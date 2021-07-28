@@ -1,4 +1,5 @@
 ;Aims to be a script that can be used for most applications.
+;Place the script in the folder above the game's root directory and edit the variables to fit your use case.
 ;Define variables found from outside the script.
 #define FileVersion GetFileVersion("Quake III\quake3e.x64.exe")
 ;Define useful variables to be changed on a case-by-case basis for streamlined setup creation.
