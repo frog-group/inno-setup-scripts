@@ -5,11 +5,10 @@
 #define OneComponent "no"
 #define NoSubComponents "yes"
 #define AppSize 161956304/1024
-#define LZMADictSize
-#if AppSize <= 1048576, \
-  LZMADictSize = AppSize
+#if AppSize <= 1048576
+  #define LZMADictSize AppSize
 #else
-  LZMADictSize = 1048576
+  #define LZMADictSize 1048576
 #endif
 
 
