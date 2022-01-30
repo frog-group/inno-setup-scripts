@@ -1,18 +1,19 @@
 ;Aims to be a script that can be used for most applications.
 ;Define variables found from outside the script.
-#define FileVersion GetFileVersion("Factorio\bin\x64\factorio.exe")
+#define FileVersion GetFileVersion("Internet Cafe Simulator\Internet Cafe Simulator.exe")
 ;Define useful variables to be changed on a case-by-case basis for streamlined setup creation.
-#define AppName "Factorio"
-#define AppExe1 "bin\x64\factorio.exe"
+#define AppName "Internet Cafe Simulator"
+#define AppExe1 "Internet Cafe Simulator.exe"
+#define AppParams ""
 ;#define AppExe2 "sm64ex-coop\sm64.us.f3dex2e.exe"
 #if FileVersion != ""
   #define AppVersion FileVersion
 #else
-  #define AppVersion "2021.09.14"
+  #define AppVersion "2022.1.30"
 #endif
 #define OneComponent "yes"
 #define NoSubComponents "yes"
-#define AppSize 1819786799/1024
+#define AppSize 4181477538/1024
 #if AppSize <= 1048576
   #define LZMADictSize AppSize
 #else
@@ -67,9 +68,9 @@ Source: "{#AppName}\*"; DestDir: "{app}"; Flags: recursesubdirs
 
 [Icons]
 ;Shortcuts on files that must be installed.
-Name: "{group}\{#AppName}"; Filename: "{app}\{#AppExe1}"; IconFilename: "{app}\{#AppName}.ico"
+Name: "{group}\{#AppName}"; Filename: "{app}\{#AppExe1}"; IconFilename: "{app}\{#AppName}.ico"; Parameters: "{#AppParams}";
 ;Name: "{group}\{#AppName} Multiplayer"; Filename: "{app}\{#AppExe2}"
-Name: "{commondesktop}\{#AppName}"; Filename: "{app}\{#AppExe1}"; IconFilename: "{app}\{#AppName}.ico"
+Name: "{commondesktop}\{#AppName}"; Filename: "{app}\{#AppExe1}"; IconFilename: "{app}\{#AppName}.ico"; Parameters: "{#AppParams}";
 ;Name: "{commondesktop}\{#AppName} Multiplayer"; Filename: "{app}\{#AppExe2}"
 
 ;Shortcuts on files that may not be installed.
